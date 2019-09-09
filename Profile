@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Dog</title>
+</head>
+
+<script>
+
+function player(name){
+
+	this.name=name;
+
+	this.report = function(){
+		alert("Hello " +this.name + " !");
+	};
+
+}
+
+ 
+var person2 = new player("Billy");
+person2.report();
+var person3 = new player("Lucas");
+person3.report();
+
+function up(element){
+	element.style.color="red";
+}
+function out(element){
+	element.style.color="green";
+}
+function forbtn(){
+	var btn = document.getElementById("btn");
+	var btn2 = document.getElementById("btn2");
+	btn.onclick=function(){
+		alert("= =");
+	}
+	var handler = function(){
+		alert("= =");
+	}
+	btn2.addEventListener("click", handler);
+}
+
+
+</script>
+<body onload= "forbtn()">
+
+	<b>Lucky</b>
+	<div>
+		<img src="Lucky.jpg"></img>
+	</div>
+
+	<button id = "btn"> Billy </button>
+	<button id = "btn2"> Lucas </button>
+
+	<li>
+	<span onmouseover="up(this)"
+		onmouseout="out(this)"> Billy </span>
+	</li>
+	<li>
+	<span onmouseover="up(this)"
+		onmouseout="out(this)"> Lucas </span>
+	</li>
+	
+	
+</body>
+</html>
+
